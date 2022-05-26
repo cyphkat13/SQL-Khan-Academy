@@ -1,0 +1,47 @@
+/* Create table about the people and what they do here */
+
+CREATE TABLE persons (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    movie TEXT);
+    
+INSERT INTO persons (name, movie) VALUES ("Mulan", "Mulan");
+INSERT INTO persons (name, movie) VALUES ("Cinderella", "Cinderella");
+INSERT INTO persons (name, movie) VALUES ("Ariel", "The Little Mermaid");
+INSERT INTO persons (name, movie) VALUES ("Rapunzel", "Tangled");
+INSERT INTO persons (name, movie) VALUES ("Merida", "Brave");
+INSERT INTO persons (name, movie) VALUES ("Jasmine", "Aladdin");
+
+CREATE TABLE hobbies (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person_id INTEGER,
+    name TEXT);
+    
+INSERT INTO hobbies (person_id, name) VALUES (1, "fighting");
+INSERT INTO hobbies (person_id, name) VALUES (1, "standing up to the patriarchy");
+INSERT INTO hobbies (person_id, name) VALUES (1, "defeating Shan Yu");
+INSERT INTO hobbies (person_id, name) VALUES (2, "cleaning");
+INSERT INTO hobbies (person_id, name) VALUES (2, "partying");
+INSERT INTO hobbies (person_id, name) VALUES (2, "Leaving her Stepmother");
+INSERT INTO hobbies (person_id, name) VALUES (3, "swimming");
+INSERT INTO hobbies (person_id, name) VALUES (3, "singing");
+INSERT INTO hobbies (person_id, name) VALUES (3, "defeating the sea witch");
+INSERT INTO hobbies (person_id, name) VALUES (4, "painting");
+INSERT INTO hobbies (person_id, name) VALUES (4, "cleaning");
+INSERT INTO hobbies (person_id, name) VALUES (4, "Leaving her Stepmother");
+INSERT INTO hobbies (person_id, name) VALUES (5, "archery");
+INSERT INTO hobbies (person_id, name) VALUES (5, "standing up to the patriarchy");
+INSERT INTO hobbies (person_id, name) VALUES (5, "deafeating Mor'du");
+INSERT INTO hobbies (person_id, name) VALUES (6, "going to markets");
+INSERT INTO hobbies (person_id, name) VALUES (6, "flying magic carpets");
+INSERT INTO hobbies (person_id, name) VALUES (6, "deafeating the Grand Vizier");
+
+/*Use a JOIN to display a table showing princesses names with their hobbies*/
+
+SELECT persons.name, hobbies.name
+    FROM persons
+    JOIN hobbies
+    ON persons.id = hobbies.person_id;
+    
+    
+    
