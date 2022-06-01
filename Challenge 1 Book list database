@@ -1,0 +1,12 @@
+/** Book list:
+The Quiet American (4)
+Cold Mountain (3)
+Atonement (5)
+**/
+
+CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER );
+
+INSERT INTO books VALUES (1, "The Quiet American", 4);
+INSERT INTO books VALUES (2, "Cold Mountain", 3);
+INSERT INTO books VALUES (3, "Atonement", 5);
+SELECT * FROM books;
