@@ -1,0 +1,16 @@
+/** Equestrian Disciplines:
+Dressage (5)
+Show Jumpers (5)
+Eventing (5)
+Hunter Jumpers (3)
+Saddle Seat (2)
+**/
+
+CREATE TABLE disciplines (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER);
+
+INSERT INTO disciplines VALUES (1, "Dressage", 5);
+INSERT INTO disciplines VALUES (2, "Show Jumpers", 5);
+INSERT INTO disciplines VALUES (3, "Eventing", 5);
+INSERT INTO disciplines VALUES (4, "Hunter Jumpers", 3);
+INSERT INTO disciplines VALUES (5, "Saddle Seat", 2);
+SELECT * FROM disciplines;
