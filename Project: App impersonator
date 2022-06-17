@@ -1,0 +1,40 @@
+/* What does the app's SQL look like? */
+
+/*CREATE a table to store the data.
+INSERT a few example rows in the table.
+Use an UPDATE to emulate what happens when you edit data in the app.
+Use a DELETE to emulate what happens when you delete data in the app.*/
+
+CREATE TABLE horse_show (
+    id INTEGER PRIMARY KEY,
+    rider_name TEXT,
+    horse_name TEXT,
+    level TEXT,
+    test INTEGER,
+    score INTEGER);
+
+INSERT INTO horse_show (rider_name, horse_name, level, test, score) VALUES ("Sarah", "Roo", "Fourth", 1, 73.80);
+INSERT INTO horse_show (rider_name, horse_name, level, test, score) VALUES ("Sarah", "Cher", "Second", 2, 71);
+INSERT INTO horse_show (rider_name, horse_name, level, test, score) VALUES ("Sarah", "Cher", "Second", 3, 70.50);
+INSERT INTO horse_show (rider_name, horse_name, level, test, score) VALUES ("Katlyn", "Dillon", "Second", 3, 69.70);
+INSERT INTO horse_show (rider_name, horse_name, level, test, score) VALUES ("Harley", "Jax", "Prix St George", 0, 75);
+INSERT INTO horse_show (rider_name, horse_name, level, test, score) VALUES ("Leslie", "Baby", "Intro", 3, 68.90);
+INSERT INTO horse_show (rider_name, horse_name, level, test, score) VALUES ("Leslie", "Baby", "First", 1, 68.50);
+INSERT INTO horse_show (rider_name, horse_name, level, test, score) VALUES ("Leslie", "Coolie", "First", 2, 65);
+INSERT INTO horse_show (rider_name, horse_name, level, test, score) VALUES ("Leslie", "Coolie", "First", 3, 67.40);
+
+SELECT * FROM horse_show;
+
+UPDATE horse_show SET rider_name = "Cheyenne"
+    WHERE id = 4;
+
+SELECT * FROM horse_show;
+
+DELETE FROM horse_show
+    WHERE id = 4;
+    
+SELECT * FROM horse_show;
+
+
+
+
